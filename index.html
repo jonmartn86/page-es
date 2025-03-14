@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - 5 Digit Number</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+  <div class="login-container">
+    <h2>ژمارا نهێنی یا خوە داخل کە</h2>
+    <form id="loginForm">
+      <label for="number">دروست کرن ژلایێ </label>
+emad uk     <input type="text" id="number" name="number" maxlength="5" placeholder="12345" required>
+      <button type="submit">چونا ژوور</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    // Predefined list of valid 5-digit numbers
+    const validNumbers = ["72834", "51930", "12816", "82027", "41326", "62917"];
+
+    // Simple client-side validation for 5-digit number
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const number = document.getElementById('number').value;
+      const messageDiv = document.getElementById('message');
+
+      // Check if the entered number is valid
+      if (validNumbers.includes(number)) {
+        // Redirect to another page on success
+        messageDiv.innerHTML = '<p style="color: green;">ژمارا نهێنی دروستە</p>';
+        
+        // Delay the redirect to show the success message
+        setTimeout(function() {
+          window.location.href = "welcome.html";  // Change this URL to your desired page
+        }, 2000); // Redirect after 2 seconds
+      } else {
+        messageDiv.innerHTML = '<p style="color: red;">Invalid number. Please enter a valid 5-digit number.</p>';
+      }
+    });
+  </script>
+</body>
+</html>
