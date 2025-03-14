@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - 5 Digit Number</title>
+  <title>es.group.kur</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
 <body>
@@ -11,7 +11,7 @@
     <h2>ژمارا نهێنی یا خوە داخل کە</h2>
     <form id="loginForm">
       <label for="number">دروست کرن ژلایێ </label>
-emad uk     <input type="text" id="number" name="number" maxlength="5" placeholder="12345" required>
+emad uk     <input type="text" id="number" name="number" maxlength="5" placeholder="ژمارا نهێنی" required>
       <button type="submit">چونا ژوور</button>
     </form>
     <div id="message"></div>
@@ -37,7 +37,7 @@ emad uk     <input type="text" id="number" name="number" maxlength="5" placehold
           window.location.href = "welcome.html";  // Change this URL to your desired page
         }, 2000); // Redirect after 2 seconds
       } else {
-        messageDiv.innerHTML = '<p style="color: red;">Invalid number. Please enter a valid 5-digit number.</p>';
+        messageDiv.innerHTML = '<p style="color: red;">ژمارا نهێنی خەلەتە هێڤیە دوبارە هەولبدە</p>';
       }
     });
   </script>
